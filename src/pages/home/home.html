@@ -8,11 +8,19 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
+  <h3>Ionic Home Page</h3>
   <button ion-button secondary menuToggle>Toggle Menu</button>
+  <button ion-button color="primary" (click)="modal()">modal</button>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngif="profile.actionSwitch">{{profile.actionSwitch}}</ion-col>
+      <ion-col *ngif="profile.name" col-6>{{profile.name}}</ion-col>
+      <ion-col *ngif="profile.gender">{{profile.gender}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngif="profile.domestic">{{profile.domestic}}</ion-col>
+      <ion-col *ngif="profile.startDate" col-8>{{profile.startDate}}</ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
