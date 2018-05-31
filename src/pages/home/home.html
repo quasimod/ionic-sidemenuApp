@@ -14,13 +14,15 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col *ngif="profile.actionSwitch">{{profile.actionSwitch}}</ion-col>
-      <ion-col *ngif="profile.name" col-6>{{profile.name}}</ion-col>
-      <ion-col *ngif="profile.gender">{{profile.gender}}</ion-col>
+      <ion-col>{{profile.actionSwitch}}</ion-col>
+      <ion-col col-6>{{profile.name}}</ion-col>
+      <ion-col>{{profile.gender}}</ion-col>
     </ion-row>
     <ion-row>
-      <ion-col *ngif="profile.domestic">{{profile.domestic}}</ion-col>
-      <ion-col *ngif="profile.startDate" col-8>{{profile.startDate}}</ion-col>
+      <ion-col>{{profile.domestic}}</ion-col>
+      <ion-col col-8>{{profile.startDate}}</ion-col>
     </ion-row>
   </ion-grid>
+
+  <button ion-button color="primary" (click)="showPrompt()">alert</button>
 </ion-content>
