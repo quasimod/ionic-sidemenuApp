@@ -17,6 +17,11 @@
 
 
 <ion-content padding>
+    <button ion-button full icon-right (click)="createProduct()">
+        New Product
+        <ion-icon name="create"></ion-icon>
+        </button>
+        
     <ion-list>
       <ion-list-header>Products sorted by name</ion-list-header>
       <ion-item *ngFor="let product of productsObservable | async" (click)="navToDetail(product)">

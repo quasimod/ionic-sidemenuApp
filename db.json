@@ -26,9 +26,15 @@
     },
     {
       "id": 6,
-      "name": "mobile",
+      "name": "전화기",
       "cost": 200,
       "quantity": 25
+    },
+    {
+      "name": "술",
+      "cost": "100",
+      "quantity": "50",
+      "id": 7
     }
   ]
 }

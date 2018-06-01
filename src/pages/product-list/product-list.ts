@@ -31,6 +31,6 @@ export class ProductListPage {
 
   createProduct(){
     this.navCtrl.push("ProductViewPage", {"product": {}});
-    }
+  }
     
 }

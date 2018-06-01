@@ -13,7 +13,7 @@ import { Product } from '../../interfaces/product';
 */
 @Injectable()
 export class RestProvider {
-  baseUrl:string = "http://localhost:3000";
+  baseUrl:string = "http://211.58.44.252:3000";
   
   constructor(public http: HttpClient) {
     console.log('RestProvider constructor');

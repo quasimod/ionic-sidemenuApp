@@ -14,19 +14,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'slide.html',
 })
 export class SlidePage {
-  private imageList = [
-    {title:'assets/imgs/1.jpg'},
-    {title:'assets/imgs/2.jpg'},
-    {title:'assets/imgs/3.jpg'},
-    {title:'assets/imgs/4.jpg'},
-    {title:'assets/imgs/5.jpg'}
-  ];
+  public imageList = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SlidePage');
+    this.imageList = [
+      {title:'assets/imgs/1.jpg'},
+      {title:'assets/imgs/2.jpg'},
+      {title:'assets/imgs/3.jpg'},
+      {title:'assets/imgs/4.jpg'},
+      {title:'assets/imgs/5.jpg'}
+    ];
   }
 
 }
