@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, ModalController, AlertController } from 'ionic-angular';
 import { Profile } from '../../interfaces/Profile';
+import { SMS } from '@ionic-native/sms';
 
 @Component({
   selector: 'page-home',
@@ -8,7 +9,7 @@ import { Profile } from '../../interfaces/Profile';
 })
 export class HomePage {
   public profile = {} as Profile;
-  constructor(public navCtrl: NavController, public modalCtrl:ModalController, public alertCtrl:AlertController) {
+  constructor(public navCtrl: NavController, public modalCtrl:ModalController, public alertCtrl:AlertController, private sms:SMS) {
 
   }
   modal(){
@@ -47,5 +48,32 @@ export class HomePage {
       ]
     });
     prompt.present();
+  }
+
+  sendSMS() {
+    let prompt = this.alertCtrl.create({
+      title: 'SMS',
+      message: "메세지를 작성하여 주시기 바랍니다.",
+      inputs: [ 
+        {
+          name: 'phone',
+          placeholder: 'phone'
+          },
+      {
+      name: 'msg',
+      placeholder: 'Message Here....'
+      },
+      ],
+      buttons: [ {
+      text: '취소',
+      handler: data => { console.log('취소 clicked'); }
+      },{
+      text: '보내기',
+      handler: data => { this.sms.send
+      (data.phone, data.msg);}
+      }
+      ]
+      });
+      prompt.present();
   }
 }

@@ -25,7 +25,8 @@ export class MyApp {
       { title: 'List', component: ListPage },
       { title: 'ActionSheet', component: 'ActionSheetPage' },
       { title: 'Slide', component: 'SlidePage' },
-      { title: 'Product', component: 'ProductListPage' }
+      { title: 'Product', component: 'ProductListPage' },
+      { title: 'Database', component: 'DatabasePage' }
     ];
 
   }
